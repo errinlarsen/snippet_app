@@ -1,0 +1,7 @@
+0.0.1:
+ - Add a LICENSE file (MIT license)
+ - Add a README.md file
+ - Add a RAILS_NEW.log file for posterity (helpful? probably not)
+
+0.0.0:
+ - Initial commit
