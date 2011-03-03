@@ -2,6 +2,8 @@
  - Add a LICENSE file (MIT license)
  - Add a README.md file
  - Add a RAILS_NEW.log file for posterity (helpful? probably not)
+ - Add a SNIPPET_VERSION file
+   - version = File.read( Rails.root + 'SNIPPET_VERSION' ).strip
 
 0.0.0:
  - Initial commit
