@@ -31,7 +31,7 @@ Feature: Homepage
   @wip
   Scenario: Programmer visits home page
     When I am on the home page
-    Then I should see "Welcome to Snippets!" within "H1"
+    Then I should see "Welcome to Snippets!" within "h1"
     And I should see a sidebar with previously saved snippets
     And I should see a form that allows me to to paste and save my snippet
 
