@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe "snippet/index.html.haml", :type => :request do
-  it "displays a welcome message" do
+  it "displays a welcome message in an H1 tag" do
     visit '/'
-    page.should have_content( 'Welcome to Snippets!' )
+    within( 'h1' ) { page.should have_content( 'Welcome to Snippets!' )}
   end
 end
