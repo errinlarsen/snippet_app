@@ -1,1 +1,10 @@
-%h1 Welcome to Snippets!
+%div#page
+  %div#header
+    %h1 Welcome to Snippets!
+  %div#body
+    %div#sidebar
+    %div#snippet
+      %ul
+        - @recent_snippets.each do |snippet|
+          %li= link_to snippet.name, snippet
+  %div#footer
