@@ -25,12 +25,12 @@ gem 'rails', '3.0.5'
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
-# group :development, :test do
-#   gem 'webrat'
-# end
-gem "rspec-rails", ">= 2.0.1", :group => [:development, :test]
-gem "cucumber-rails", :group => :test
-gem "capybara", :group => :test
+group :development, :test do
+  gem "rspec-rails", ">= 2.0.1"
+  gem 'webrat'
+  gem "cucumber-rails", :group => :test
+  gem "capybara", :group => :test
+end
 
 gem "mongoid", ">= 2.0.0.beta.19"
 gem 'bson', "~> 1.2"
