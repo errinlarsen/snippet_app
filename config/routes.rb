@@ -1,4 +1,4 @@
-Snippet::Application.routes.draw do
+SnippetApp::Application.routes.draw do
   get "snippet/index"
 
   # The priority is based upon order of creation:
