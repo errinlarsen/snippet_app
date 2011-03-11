@@ -43,40 +43,9 @@ describe "snippet/index.html.haml" do
 #      :tags        => 'c test',
 #      :text        => c_snippet_text )
 #  end
-
-  let( :snippet1 ) { mock_model( 'Snippet', :name => 'Snippet 1' )}
-  let( :snippet2 ) { mock_model( 'Snippet', :name => 'Snippet 2' )}
-  let( :new_snippet ) { mock_model( 'Snippet' ).as_new_record.as_null_object }
-
   before do
-    assign( :recent_snippets, [snippet1, snippet2] )
-    assign( :snippet, new_snippet )
+    assign( :snippet, mock_model( 'Snippet' ).as_new_record.as_null_object )
     render
-  end
-
-  it "renders a div for all content" do
-    rendered.should have_selector( 'div#page' )
-  end
-
-  it "renders a div for the header" do
-    rendered.should have_selector( 'div#header' )
-  end
-
-  it "displays a welcome message within the header in an H1 tag" do
-    rendered.should have_selector( 'div#header h1' ) do |h1|
-      h1.should contain( 'Welcome to Snippets!' )
-    end
-  end
-
-  it "renders a div for the body" do
-    rendered.should have_selector( 'div#body' )
-  end
-
-  it "renders a div for the sidebar with links to recent snippets" do
-    rendered.should have_selector( 'div#sidebar ul#recent_snippets li a' ) do |link|
-      link.should contain lua_snippet.name
-      link.should contain c_snippet.name
-    end
   end
 
   it "renders a div for the snippet form" do
