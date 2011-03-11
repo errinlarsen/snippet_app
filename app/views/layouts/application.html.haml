@@ -6,4 +6,9 @@
     = csrf_meta_tag
 
   %body
-    = yield
+    %div#page
+      %div#header
+        %h1 Snippets
+      %div#body
+        = yield
+      %div#footer

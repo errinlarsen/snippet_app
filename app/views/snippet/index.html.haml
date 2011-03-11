@@ -1,21 +1,12 @@
-%div#page
-  %div#header
-    %h1 Welcome to Snippets!
-  %div#body
-    %div#sidebar
-      %ul#recent_snippets
-        - @recent_snippets.each do |snippet|
-          %li= link_to snippet.name, snippet
-    %div#snippet
-      = form_for @snippet do |f|
-        = f.label :name, 'Name:'
-        = f.text_field :name
-        = f.select :type, [['Choose type ...', 1], ['Test one', 2], ['Test two',3]]
-        = f.label :description
-        = f.text_field :description
-        = f.label :tags
-        = f.text_field :tags
-        = f.label :text
-        = f.text_area :text
-        = f.submit 'Save'
-  %div#footer
+%div#snippet
+  = form_for @snippet do |f|
+    = f.label :name, 'Name:'
+    = f.text_field :name
+    = f.select :type, [['Choose type ...', 1], ['Test one', 2], ['Test two',3]]
+    = f.label :description
+    = f.text_field :description
+    = f.label :tags
+    = f.text_field :tags
+    = f.label :text
+    = f.text_area :text
+    = f.submit 'Save'
