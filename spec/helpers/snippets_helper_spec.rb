@@ -10,6 +10,6 @@ require 'spec_helper'
 #     end
 #   end
 # end
-describe SnippetHelper do
+describe SnippetsHelper do
   pending "add some examples to (or delete) #{__FILE__}"
 end

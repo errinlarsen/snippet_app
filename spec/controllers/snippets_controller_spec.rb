@@ -31,6 +31,14 @@ describe SnippetsController do
       post :create
       response.should redirect_to(:action => "index")
     end
-  end
 
+    context "when the snippet saves successfully" do
+      it "sets a flash[:notice] message"
+      it "redirects to the Snippets index" do
+        post :create
+        response.should redirect_to(:action => "index")
+      end
+    end
+    
+  end
 end

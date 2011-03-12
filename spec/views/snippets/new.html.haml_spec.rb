@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "snippet/new.html.haml" do
+describe "snippets/new.html.haml" do
   #  The following will be useful soon ...
   #  
 #  let( :lua_snippet ) do
