@@ -50,7 +50,7 @@ SnippetApp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => "snippet#index"
+  root :to => "snippet#new"
 
   # See how all your routes lay out with "rake routes"
 
