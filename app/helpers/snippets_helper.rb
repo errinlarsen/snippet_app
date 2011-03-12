@@ -1,2 +1,2 @@
-module SnippetHelper
+module SnippetsHelper
 end

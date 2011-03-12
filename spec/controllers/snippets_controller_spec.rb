@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SnippetController do
+describe SnippetsController do
 
   describe "POST 'create'" do
     it 'creates a new snippet' do
