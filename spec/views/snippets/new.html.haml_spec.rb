@@ -1,48 +1,6 @@
 require 'spec_helper'
 
 describe "snippets/new.html.haml" do
-  #  The following will be useful soon ...
-  #  
-#  let( :lua_snippet ) do
-#    lua_snippet_text = <<EOS
-#local position = {x=100, y=100, z=7}
-#
-#function onUse(cid, item, fromPosition)
-#  doSendMagicEffect(fromPosition, 12)
-#  doTeleportThing(cid, position)
-#  doSendMagicEffect(position, 12)
-#  return true
-#end
-#EOS
-#
-#    mock_model( 'Snippet',
-#      :name        => 'Lua snippet',
-#      :type        => :lua,
-#      :description => 'A sample Lua snippet',
-#      :tags        => 'lua test',
-#      :text        => lua_snippet_text )
-#  end
-#
-#  let( :c_snippet ) do
-#    c_snippet_text = <<EOS
-##include<stdio.h>
-#Int main(void)
-#{
-#  Int a = 14;
-#  Int b = 73;
-#  Subtr = 73 - 14;
-#    Printf("Tirando %i de %i resulta em %i\\n",a,b,subtr);
-#    Return 0;
-#}
-#EOS
-#
-#    mock_model( 'Snippet',
-#      :name        => 'C snippet',
-#      :type        => :c,
-#      :description => 'A sample C snippet',
-#      :tags        => 'c test',
-#      :text        => c_snippet_text )
-#  end
   before do
     assign(:snippet, mock_model("Snippet").as_new_record.as_null_object)
     render
