@@ -10,7 +10,7 @@ class SnippetsController < ApplicationController
     @snippet = Snippet.new(params[:snippet])
     if @snippet.save
       flash[:notice] = "The snippet was saved successfully."
-      redirect_to :action => "index"
+      redirect_to snippet_path(@snippet)
     else
       render :action => "new"
     end

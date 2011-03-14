@@ -5,4 +5,6 @@ class Snippet
   field :description, :type => String
   field :tags, :type => String
   field :text, :type => String
+
+  validates_presence_of :name, :type, :tags, :text
 end

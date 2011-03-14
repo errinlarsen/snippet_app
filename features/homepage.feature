@@ -4,7 +4,7 @@ Feature: Homepage
   So that I can quickly view previous, or save new, snippets of code
 
   Background:
-    Given a snippet of "Lua" code
+    Given a snippet of "Lua" code named "Lua snippet"
       """
       local position = {x=100, y=100, z=7}
       
@@ -15,7 +15,7 @@ Feature: Homepage
         return true
       end
       """
-    And a snippet of "C" code
+    And a snippet of "C" code named "C snippet"
       """
       #include<stdio.h>
       Int main(void)
@@ -28,11 +28,9 @@ Feature: Homepage
       }
       """
       
-  @wip
-  Scenario: Programmer visits home page
+  Scenario: User visits home page
     When I am on the home page
-    Then I should see "Welcome to Snippets!" within "h1"
-    And I should see a sidebar with previously saved snippets
+    Then I should see "Snippets" within "div#header h1"
     And I should see a form that allows me to to paste and save my snippet
 
   Scenario: Programmer views a previously saved snippet

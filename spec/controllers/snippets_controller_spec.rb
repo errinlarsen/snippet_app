@@ -25,9 +25,9 @@ describe SnippetsController do
         flash[:notice].should eq("The snippet was saved successfully.")
       end
 
-      it "redirects to the Snippets index" do
+      it "redirects to the new Snippet's show page" do
         post :create
-        response.should redirect_to(:action => "index")
+        response.should redirect_to(snippet_path(snippet))
       end
     end
 
