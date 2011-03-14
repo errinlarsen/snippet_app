@@ -1,0 +1,14 @@
+!!!
+%html
+  %head
+    %title Snippet
+    = stylesheet_link_tag :all
+    = csrf_meta_tag
+
+  %body
+    %div#page
+      %div#header
+        %h1 Snippets
+      %div#body
+        = yield
+      %div#footer
